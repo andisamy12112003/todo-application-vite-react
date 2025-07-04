@@ -4,7 +4,7 @@ import { AppContext } from "./Context"
 function ItemsTodo(props) {
     const {filterTodo} = props
     const {modeChange} = useContext(AppContext)
-    
+
     return (
     <div className={`box-border ${modeChange?null:"bg-gray-700"}`}>
         {filterTodo.length===0?(<h1 className={`${modeChange?"":"bg-gray-700 text-white"} text-2xl font-bold text-gray-600`}>**No Todos Available</h1>):(
@@ -34,7 +34,7 @@ function ItemsTodo(props) {
                         <div className="flex justify-between">
                             <button className=" px-2 rounded-2xl text-white bg-green-400">Finished </button>
                             <button className="bg-red-500 px-2 rounded-2xl text-white " 
-                            onClick={()=>deleteTodoItem(items.id)}>Delete </button>
+                            >Delete </button>
                         </div>
                     </li>
                 </>
